@@ -1,3 +1,4 @@
-/*
-You must include 5 CSS rules that aply to your application
-*/
+.inputError {
+  border-color: #dd0000;
+  background-color: #ffeeee;
+}

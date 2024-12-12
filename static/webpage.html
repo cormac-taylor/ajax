@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/styles.css">
     <title>Movie Search</title>
   </head>
   <body>
@@ -10,13 +11,21 @@
       <h1>Movie Search</h1>
     </header>
     <form id="searchMovieForm">
-      <label for="movie_search_term">Search for a Movie</label>
-      <input id="movie_search_term" type="text">
-      <button type="submit">Search Movies</button>
+      <label for="movie_search_term" id="movie_search_term_label"
+        >Search for a Movie</label
+      >
+      <input id="movie_search_term" type="text" placeholder="Enter a movie">
+      <button type="submit" id="submitButton">Search Movies</button>
     </form>
     <ul id="searchResults" hidden></ul>
     <div id="movieDetails" hidden></div>
     <a id="rootLink" href="/" hidden>New Search</a>
     <footer id="footerContainer">Cormac Taylor 20014003</footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/public/js/main.js"></script>
   </body>
 </html>
