@@ -1,26 +1,21 @@
-<!-- 
-Static HTML file 
-
-Your page should have a few basic user interface elements:
-
-A header tag, with an h1 inside it, naming your site, with a title for your page (the title tag in the head element should mimic this)
-A footer with your name, student ID, and any other info about yourself you wish to include
-An empty unordered list with an id of searchResults that is initially hidden.  
-A div with an id of movieDetails that is initially hidden.
-A form with an id of searchMovieForm.
-A text input with an id of movie_search_term.
-A label with a for attribute referencing your input
-A button to submit the form
-A link that links back to the "/" route with the text "New Search" and that has an id of rootLink This link will initially be hidden. It will ONLY be displayed when the movieDetails element is being displayed or ONLY when a search is performed and search results are being displayed.  This link will simply trigger a reload of the page, which then will display the page with just the search form so the user can search for a new movie. 
- -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>test</h1>
-</body>
+    <title>Movie Search</title>
+  </head>
+  <body>
+    <h1>Movie Search</h1>
+    <ul id="searchResults" hidden></ul>
+    <div id="movieDetails" hidden></div>
+    <form method="POST" id="searchMovieForm">
+      <label for="movie_search_term" id="movie_search_term_label">
+        Search
+        <input type="text" id="movie_search_term">
+      </label>
+      <button type="submit" id="searchMovieSubmitButton">Submit</button>
+    </form>
+    <a href="/" id="rootLink" hidden>New Search</a>
+  </body>
 </html>
