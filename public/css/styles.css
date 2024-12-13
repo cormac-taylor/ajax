@@ -1,4 +1,31 @@
 .inputError {
-  border-color: #dd0000;
-  background-color: #ffeeee;
+  border-color: #fc4b4e;
+  background-color: #9c2b2e;
+}
+
+.inputError::placeholder {
+  color: #fc4b4e;
+}
+
+body {
+  background-color: #222222;
+  color: #ededed;
+}
+
+button {
+  color: #222222;
+  background-color: #ededed;
+}
+
+input {
+  color: #222222;
+  background-color: #ededed;
+}
+
+.searchResultsA {
+  color: #38668f;
+}
+
+#rootLink {
+  color: #c8af38;
 }

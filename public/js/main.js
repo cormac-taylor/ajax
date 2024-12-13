@@ -1,9 +1,6 @@
 (function ($) {
-  const headerContainer = $("#headerContainer"),
-    searchMovieForm = $("#searchMovieForm"),
-    movie_search_term_label = $("#movie_search_term_label"),
+  const searchMovieForm = $("#searchMovieForm"),
     movie_search_term = $("#movie_search_term"),
-    submitButton = $("#submitButton"),
     searchResults = $("#searchResults"),
     movieDetails = $("#movieDetails"),
     rootLink = $("#rootLink"),
@@ -21,6 +18,7 @@
       return;
     }
 
+    rootLink.show()
     movieDetails.hide();
     searchResults.empty();
 
@@ -46,6 +44,7 @@
   $(document).on("click", ".searchResultsA", function (event) {
     event.preventDefault();
 
+    rootLink.show()
     searchResults.hide();
     movieDetails.empty();
 
@@ -114,7 +113,10 @@ const movieDetailsHtml = (movieDetailsObj) => {
   }
 
   let moviePosterSrc;
-  if (movieDetailsObj.Poster && movieDetailsObj.Poster.trim() !== notAvailable) {
+  if (
+    movieDetailsObj.Poster &&
+    movieDetailsObj.Poster.trim() !== notAvailable
+  ) {
     moviePosterSrc = movieDetailsObj.Poster.trim();
   } else {
     moviePosterSrc = "/public/no_image.jpeg";
