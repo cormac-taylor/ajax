@@ -1,6 +1,7 @@
 .inputError {
   border-color: #fc4b4e;
   background-color: #9c2b2e;
+  color: #ededed;
 }
 
 .inputError::placeholder {
